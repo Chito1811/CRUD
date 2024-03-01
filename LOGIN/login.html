@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Design by foolishdeveloper.com -->
-    <title>Glassmorphism login Form Tutorial in html css</title>
+    <title>Login</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilo-glass.css">
@@ -18,17 +18,21 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>-->
-    <form method="post" action=""><!--He tenido que completar method y action-->
+    <form method="post" action="" id="miFormulario"><!--He tenido que completar method y action-->
         <h3>Login Here</h3>
 
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username" name="user"><!--Poner name-->
+        <label for="username">Username: </label><!--for con el id-->
+        <input type="text" name="username" id="username" placeholder="Username" > <br> <!--id para el front | name para el back-->
+        <div id="usernamehelp" style="visibility: hidden; color: red;">Invalid username</div> <br>
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="pass"><!--Poner name-->
+        <input type="password" placeholder="Password" id="password" name="pass"> <br><!--Poner name-->
+        <div id="passwordHelp" style="visibility: hidden; color: red;">Invalid password</div> 
 
         <button class="login" type="submit">Log In</button><!--Poner type="submit"-->
+        
     </form>
+    <script src="../js/JsLogin.js"></script>
     
 </body>
 </html>

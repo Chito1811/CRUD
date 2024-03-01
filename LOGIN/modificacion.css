@@ -12,6 +12,7 @@ body{
     height: 100vh; /* Para que el contenido use el 100% del body*/
 }
 body h1{
+    max-width: 600px; /* Ancho máximo del formulario */
     color: white;
     text-align: center;
     padding: 20px;
@@ -21,13 +22,7 @@ body h1{
     backdrop-filter: blur(20px); /* el filtro blur en background hace el glassmorfismo */
     box-shadow: 0 0 10px 5px rgba(224, 224, 224, 0.4);
 }
-form p{
-    padding: 1%;
-    background-color: white;
-    color: black;
-    width: 91%;
-}
-form{
+#miFormulario{
     color: white;
     padding: 20px;
     width: 30%;
@@ -37,12 +32,15 @@ form{
     box-shadow: 0 0 10px 5px rgba(224, 224, 224, 0.4);
 }
 
-textarea{
-    resize: none;
+input{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    
 }
 
-
 input[type="text"]{
+    height: 20px;
+    width: 100%;
     width: 90%;
     padding: 1%;
     
@@ -64,4 +62,27 @@ input[type="submit"]:hover{
 }
 input:required:after{
     content: "*";
+}
+
+#edad {
+    width: 20%; /* Ajusta el valor según el tamaño deseado */
+    max-width: 150px; /* Opcional: para limitar el ancho máximo del campo */
+}
+#email {
+    width: 100%; /* Ajusta el valor según el tamaño deseado */
+    max-width: 200px; /* Opcional: para limitar el ancho máximo del campo */
+}
+#number {
+    width: 50%; /* Ajusta el valor según el tamaño deseado */
+    max-width: 200px; /* Opcional: para limitar el ancho máximo del campo */
+}
+
+
+@media only screen and (max-width: 800px) {
+    #miFormulario{
+        width: 80% !important; /* Ocupar todo el ancho de la pantalla */
+    }
+    body h1{
+        width: 80% !important; /* Ocupar todo el ancho de la pantalla */
+    }
 }
